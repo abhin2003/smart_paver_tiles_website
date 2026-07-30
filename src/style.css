@@ -1,0 +1,376 @@
+:root {
+  /* Earthy Brown & Beige Palette (from user images) */
+  --color-green: #A89F9A; /* Mid-tone accent */
+  --color-light-gray: #EBE8E6;
+  --color-dark-green: #2F1F19; /* Dark brown for text/primary */
+  --color-teal: #6F615A;
+  --color-pale-green: #D4CECC; /* Light beige for hero background */
+  --color-white: #FFFFFF;
+  
+  --color-bg: var(--color-white);
+  --color-surface: #F5F5F5; /* A very subtle gray for alternate sections */
+  --color-text: var(--color-dark-green);
+  
+  /* Typography */
+  --font-body: 'Cinzel', serif;
+  
+  /* Layout */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --section-padding: 120px 5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-white);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader-logo {
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--color-dark-green);
+  letter-spacing: 2px;
+}
+
+/* Buttons */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 30px;
+  border: 1px solid var(--color-text);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.btn-pill:hover {
+  background-color: var(--color-text);
+  color: var(--color-white);
+}
+
+.btn-pill svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.btn-pill:hover svg {
+  transform: translateX(5px);
+}
+
+.btn-pill-white {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.btn-pill-white:hover {
+  background-color: var(--color-white);
+  color: var(--color-dark-green);
+}
+
+/* Navbar */
+.florim-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 5%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-dark-green);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Adding a custom icon element to mimic florim's logo shape */
+.nav-brand-icon {
+  display: inline-block;
+  width: 15px;
+  height: 25px;
+  background-color: var(--color-green);
+  transform: skewX(-20deg);
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-green);
+}
+
+.nav-utilities {
+  display: none; /* Hidden on PC as requested */
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-util-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-util-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-lang {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 10px;
+  border-left: 1px solid #ddd;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Hero Section */
+.florim-hero {
+  height: 100vh;
+  position: relative;
+  /* Using pale green as the image placeholder background per user request */
+  background-color: var(--color-pale-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 80px 5%;
+  overflow: hidden;
+}
+
+/* The hero content is white in the screenshot to contrast with the dark background */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--color-white);
+  max-width: 800px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.hero-title {
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 40px;
+  letter-spacing: -2px;
+}
+
+/* Placeholders */
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-light-gray);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-teal);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.image-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.4) 50%, transparent 60%);
+  background-size: 200% 200%;
+  animation: shimmer 5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Split Sections */
+.split-section {
+  padding: var(--section-padding);
+  background-color: var(--color-surface);
+}
+
+.split-section:nth-child(even) {
+  background-color: var(--color-bg);
+}
+
+.split-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.split-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+}
+
+.split-title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
+}
+
+.split-desc {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.split-visual {
+  height: 700px;
+  width: 100%;
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: var(--section-padding);
+  background-color: var(--color-white);
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gallery-title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Footer */
+.florim-footer {
+  padding: 60px 5%;
+  background-color: var(--color-dark-green);
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .split-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .split-visual {
+    height: 500px;
+  }
+  
+  /* Invert order on mobile if text was on the right */
+  .order-mobile-last {
+    order: 2;
+  }
+  .order-mobile-first {
+    order: 1;
+  }
+
+  .nav-links, .nav-lang {
+    display: none;
+  }
+
+  .nav-utilities {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .split-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
