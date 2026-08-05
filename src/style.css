@@ -582,97 +582,118 @@ html, body {
 }
 
 
-/* Footer Re-design */
-.arch-footer {
-  position: relative;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 10vh 5% 5vh 5%;
-  overflow: hidden;
+/* Solid Minimalist Footer */
+.arch-footer-solid {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 15vh 5% 5vh 5%;
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-.footer-overlay {
-  /* Using inline style for the specific dark gradient */
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-.footer-content {
-  position: relative;
-  z-index: 3;
+.footer-solid-container {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+}
+
+.footer-cta {
+  text-align: center;
+  margin-bottom: 15vh;
+}
+
+.cta-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  margin-bottom: 40px;
+}
+
+.cta-buttons {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.footer-top {
+.btn-primary, .btn-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 40px;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background-color: #25D366; /* WhatsApp Green */
+  color: #fff;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E;
+  transform: translateY(-2px);
+}
+
+.footer-info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 60px;
-  margin-bottom: 8vh;
+  margin-bottom: 80px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 80px;
 }
 
-.footer-info-col h3 {
+.footer-brand-col h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.footer-brand-col p {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.footer-contact-col h3 {
   font-family: var(--font-sans);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: var(--color-accent);
 }
 
-.footer-info-col p, .footer-info-col a {
-  display: block;
+.footer-contact-col p {
   color: var(--color-light);
-  text-decoration: none;
   font-size: 1.1rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   line-height: 1.6;
   font-weight: 300;
-  transition: color 0.3s;
-}
-
-.footer-info-col a:hover {
-  color: var(--color-accent);
-}
-
-.footer-massive-brand {
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding-bottom: 4vh;
-  margin-bottom: 4vh;
-}
-
-.footer-massive-brand h2 {
-  font-family: var(--font-display);
-  font-size: 11vw; 
-  line-height: 0.8;
-  letter-spacing: -2px;
-  white-space: nowrap;
-  color: var(--color-white);
-  text-align: center;
 }
 
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.5);
-}
-
-.footer-legal a {
-  color: rgba(255,255,255,0.5);
-  text-decoration: none;
-  margin-left: 30px;
-  transition: color 0.3s;
-}
-
-.footer-legal a:hover {
-  color: var(--color-white);
+  color: rgba(255,255,255,0.4);
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 /* Responsive */
@@ -684,10 +705,6 @@ html, body {
   .editorial-visual-wrapper {
     width: 100%;
     height: 60vh;
-  }
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
   }
   
   .nav-links { display: none; }
@@ -775,23 +792,9 @@ html, body {
     font-size: 1.5rem;
   }
   
-  .footer-top {
+  .footer-info {
     grid-template-columns: 1fr;
     gap: 40px;
-  }
-  
-  .footer-massive-brand h2 {
-    font-size: 15vw;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-  }
-  
-  .footer-legal a {
-    margin-left: 0;
-    margin-right: 30px;
+    padding-top: 40px;
   }
 }
