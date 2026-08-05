@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SMART PAVERS | Luxury Surfaces</title>
+    <title>SMART PAVERS | Architectural Surfaces</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="SMART PAVERS - Delivering architectural craftsmanship, timeless luxury, and premium outdoor experiences." />
+    <meta name="description" content="SMART PAVERS - Architectural craftsmanship, timeless luxury, and premium outdoor experiences." />
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Marcellus&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/src/style.css">
   </head>
@@ -23,19 +23,16 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="florim-nav" id="navbar">
+    <nav class="arch-nav" id="navbar">
       <a href="#" class="nav-brand">
-        <span class="nav-brand-icon"></span>
         SMART PAVERS
       </a>
-      
       <div class="nav-links">
-        <a href="#company">Company</a>
-        <a href="#services">Services</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact Us</a>
+        <a href="#story">Craftsmanship</a>
+        <a href="#cobble">Collections</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#footer">Contact</a>
       </div>
-      
       <div class="nav-utilities">
         <button class="nav-util-btn" aria-label="Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -46,176 +43,202 @@
     </nav>
 
     <main>
-      <!-- Hero Section -->
-      <section class="florim-hero" id="hero">
+      <!-- Section 1: The Immersive Hero -->
+      <section class="arch-hero" id="hero">
+        <div class="hero-bg-wrapper">
+          <img src="/assets/optimized/cat_paver_img_1_hero.webp" alt="Luxury Villa Project" class="hero-bg gs-parallax" data-speed="0.2">
+          <div class="hero-overlay"></div>
+        </div>
         <div class="hero-content">
-          <h2 class="hero-subtitle gs-reveal" style="text-transform: uppercase; letter-spacing: 2px; font-size: 1rem; margin-bottom: 20px;">High Quality Tiles • Expert Work Force • Cost Effective Service</h2>
-          <h1 class="hero-title gs-reveal">Smart Pavers</h1>
-          <a href="#services" class="btn-pill btn-pill-white gs-reveal">
-            Discover our services
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
+          <h2 class="hero-subtitle gs-reveal-up">Architectural Surfaces</h2>
+          <h1 class="hero-title gs-reveal-up">Timeless Luxury</h1>
+          <p class="hero-desc gs-reveal-up">Defining the foundation of extraordinary outdoor spaces.</p>
         </div>
       </section>
 
-      <!-- Section 2: Text Left, Placeholder Right -->
-      <section class="split-section" id="company">
-        <div class="split-container">
-          <div class="split-text gs-reveal">
-            <div style="display: flex; flex-wrap: wrap; gap: clamp(20px, 4vw, 40px); margin-bottom: 30px;">
-              <div>
-                <h3 style="font-size: clamp(2.5rem, 6vw, 3.5rem); color: var(--color-green); line-height: 1;">25</h3>
-                <p style="font-size: 0.85rem; letter-spacing: 2px; font-weight: 600; margin-top: 5px;">YEARS OF EXPERIENCE<br>SINCE 1999</p>
-              </div>
-              <div>
-                <h3 style="font-size: clamp(2.5rem, 6vw, 3.5rem); color: var(--color-green); line-height: 1;">10000+</h3>
-                <p style="font-size: 0.85rem; letter-spacing: 2px; font-weight: 600; margin-top: 5px;">HAPPY CUSTOMERS</p>
-              </div>
-            </div>
-            <h2 class="split-title" style="margin-bottom: 20px;">Precision workmanship and long-lasting performance.</h2>
-            <p class="split-desc">
-              We cater to residential, commercial, and industrial projects, ensuring precision workmanship and long-lasting performance in every installation.
+      <!-- Section 2: Magazine Editorial (Story) -->
+      <section class="arch-editorial" id="story">
+        <div class="editorial-container">
+          <div class="editorial-text gs-reveal-up">
+            <h3 class="editorial-label">The Heritage</h3>
+            <h2 class="editorial-title">Craftsmanship<br>Meets Vision.</h2>
+            <p class="editorial-desc">
+              For over 25 years, Smart Pavers has been the silent backbone of the most prestigious architectural projects. We do not just lay stones; we engineer enduring canvases for life to unfold upon.
             </p>
+            <p class="editorial-desc">
+              Our commitment to raw, premium materials ensures that every courtyard, driveway, and public space we touch transcends the ordinary.
+            </p>
+            <div class="editorial-stats">
+              <div class="stat">
+                <span class="stat-num">25+</span>
+                <span class="stat-label">Years of Mastery</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">10k</span>
+                <span class="stat-label">Visions Realized</span>
+              </div>
+            </div>
           </div>
-          <div class="split-visual gs-reveal">
-            <div class="image-placeholder">
-              Image Area Reserved
+          <div class="editorial-visual-wrapper">
+            <div class="editorial-visual gs-reveal-up">
+              <!-- Using a high quality image from Homepage Story -->
+              <img src="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.07_gallery.webp" alt="Commercial Building Project" class="gs-parallax-img">
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Section 3: Placeholder Left, Text Right -->
-      <section class="split-section" id="services">
-        <div class="split-container">
-          <!-- Force visual to be visually on the left, which it is by default in DOM order -->
-          <div class="split-visual order-mobile-last gs-reveal">
-            <div class="image-placeholder" style="background-color: var(--color-pale-green);">
-              Image Area Reserved
-            </div>
+      <!-- Section 2.5: The Catalog (Product Categories) -->
+      <section class="arch-catalog" id="catalog">
+        <div class="catalog-container">
+          <div class="catalog-visual gs-reveal-up">
+            <!-- This image changes on click -->
+            <img id="catalog-preview-img" src="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.01_gallery.webp" alt="Cobble Collection" loading="lazy">
           </div>
-          <div class="split-text order-mobile-first gs-reveal">
-            <h2 class="split-title">Our Services</h2>
-            <ul class="split-desc" style="list-style-type: none; padding-left: 0; display: flex; flex-direction: column; gap: 15px; font-size: 1.25rem; color: var(--color-dark-green);">
-              <li style="display: flex; align-items: center; gap: 10px;">
-                <span style="color: var(--color-green);">•</span> Interlock Tiles
+          <div class="catalog-list gs-reveal-up">
+            <h3 class="catalog-label">Our Collections</h3>
+            <ul class="catalog-items" id="catalog-list">
+              <li class="catalog-item active" data-img="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.01_gallery.webp">
+                <span class="catalog-number">01</span>
+                <h4>Cobble (SDP 1013)</h4>
               </li>
-              <li style="display: flex; align-items: center; gap: 10px;">
-                <span style="color: var(--color-green);">•</span> Hydraulic Pavers
+              <li class="catalog-item" data-img="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.29.53_gallery.webp">
+                <span class="catalog-number">02</span>
+                <h4>Zigzag (SDP 1004)</h4>
               </li>
-              <li style="display: flex; align-items: center; gap: 10px;">
-                <span style="color: var(--color-green);">•</span> Designer Pavers
+              <li class="catalog-item" data-img="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.07_gallery.webp">
+                <span class="catalog-number">03</span>
+                <h4>Series 1010</h4>
               </li>
-              <li style="display: flex; align-items: center; gap: 10px;">
-                <span style="color: var(--color-green);">•</span> Professional On-Site Paving Works
+              <li class="catalog-item" data-img="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.12_gallery.webp">
+                <span class="catalog-number">04</span>
+                <h4>Grass Pavers (SDP 1014)</h4>
+              </li>
+              <li class="catalog-item" data-img="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.29_gallery.webp">
+                <span class="catalog-number">05</span>
+                <h4>Pebble (SDP 1015)</h4>
               </li>
             </ul>
-            <a href="#products" class="btn-pill" style="margin-top: 20px;">
-              View our products
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
           </div>
         </div>
       </section>
 
-      <!-- Section 4: Projects (Gallery Section) -->
-      <section class="gallery-section" id="products">
-        <div class="gallery-header gs-reveal">
-          <h2 class="gallery-title">Our Products</h2>
-          <p class="split-desc" style="max-width: 600px; margin: 0 auto;">Explore our wide range of premium tiles and stones.</p>
+      <!-- Section 3: Flagship Showcase (Cobble) -->
+      <section class="arch-showcase" id="cobble">
+        <div class="showcase-bg-wrapper">
+          <!-- Cobble Image -->
+          <img src="/assets/optimized/cat_paver_img_16_gallery.webp" alt="The Cobble Collection" class="showcase-bg gs-parallax" data-speed="0.15">
+          <div class="showcase-overlay"></div>
         </div>
-        <div class="gallery-grid">
-          <div class="gallery-item gs-reveal">
-            <div class="image-placeholder">SDP 1004 ZIGZAG</div>
-          </div>
-          <div class="gallery-item gs-reveal">
-            <div class="image-placeholder" style="background-color: var(--color-pale-green);">SDP 1005</div>
-          </div>
-          <div class="gallery-item gs-reveal">
-            <div class="image-placeholder">SDP 1007</div>
-          </div>
-          <div class="gallery-item gs-reveal">
-            <div class="image-placeholder" style="background-color: var(--color-pale-green);">SDP 1010</div>
-          </div>
-          <div class="gallery-item gs-reveal">
-            <div class="image-placeholder">SDP 1011</div>
-          </div>
-          <div class="gallery-item gs-reveal">
-            <div class="image-placeholder" style="background-color: var(--color-pale-green);">SDP 1012 12'' 8'' COBBLE TILES</div>
-          </div>
-          <div class="gallery-item gs-reveal">
-            <div class="image-placeholder">SDP 1013 COBBLE TILES</div>
-          </div>
-          <div class="gallery-item gs-reveal">
-            <div class="image-placeholder" style="background-color: var(--color-pale-green);">SDP 1015 PEBBLE TILES</div>
-          </div>
-          <div class="gallery-item gs-reveal">
-            <div class="image-placeholder">SDP 1014 GRASS PAVERS</div>
-          </div>
-          <div class="gallery-item gs-reveal">
-            <div class="image-placeholder" style="background-color: var(--color-pale-green);">BANGLORE STONES</div>
-          </div>
+        <div class="showcase-content gs-reveal-up">
+          <h3 class="showcase-label">The Flagship</h3>
+          <h2 class="showcase-title">The Cobble Collection</h2>
+          <p class="showcase-desc">
+            Our magnum opus. SDP 1012 & 1013 redefine the texture of luxury. Precision-engineered for strength, meticulously textured for an organic, timeless feel. 
+          </p>
+          <a href="#projects" class="btn-outline">Explore the Collection</a>
         </div>
       </section>
 
-      <!-- Section 5: Professionals -->
-      <section class="split-section" id="thankyou">
-        <div class="split-container">
-          <div class="split-text gs-reveal">
-            <h2 class="split-title">Thank You for Choosing SMART PAVERS</h2>
-            <p class="split-desc">
-              We sincerely thank you for taking the time to explore our products and services. At SMART PAVERS, we are dedicated to delivering superior-quality paving solutions that combine strength, durability, and modern design.
-            </p>
-          </div>
-          <div class="split-visual gs-reveal">
-            <div class="image-placeholder" style="background-color: var(--color-pale-green);">
-              Image Area Reserved
+      <!-- Section 4: Horizontal Portfolio (Selected Works) -->
+      <section class="arch-horizontal-section" id="projects">
+        <div class="horizontal-header">
+          <h2 class="horizontal-title">Selected Works</h2>
+          <p class="horizontal-desc">Scroll to explore our finest architectural implementations.</p>
+        </div>
+        
+        <div class="horizontal-scroll-container">
+          <div class="horizontal-wrapper" id="horizontal-wrapper">
+            
+            <div class="horizontal-panel">
+              <img src="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.08_gallery.webp" alt="Driveway" loading="lazy">
+              <div class="horizontal-caption">Private Driveway</div>
             </div>
+            
+            <div class="horizontal-panel">
+              <img src="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.30 (1)_gallery.webp" alt="Public Space" loading="lazy">
+              <div class="horizontal-caption">Public Expanse</div>
+            </div>
+            
+            <div class="horizontal-panel">
+              <img src="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.07 (1)_gallery.webp" alt="Apartment" loading="lazy">
+              <div class="horizontal-caption">Residential Complex</div>
+            </div>
+            
+            <div class="horizontal-panel">
+              <img src="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.22_gallery.webp" alt="Walkway" loading="lazy">
+              <div class="horizontal-caption">Luxury Walkway</div>
+            </div>
+
+            <div class="horizontal-panel">
+              <img src="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.09 (1)_gallery.webp" alt="Commercial Building" loading="lazy">
+              <div class="horizontal-caption">Commercial Structure</div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <!-- Section 6: Sustainability -->
-      <section class="split-section" id="contact" style="background-color: var(--color-bg);">
-        <div class="split-container">
-          <div class="split-visual order-mobile-last gs-reveal">
-            <div class="image-placeholder">
-              Image Area Reserved
-            </div>
+      <!-- Section 5: Before / After Texture Interaction -->
+      <section class="arch-interactive" id="interactive">
+        <div class="interactive-container gs-reveal-up">
+          <div class="interactive-text">
+            <h2>Texture in Context</h2>
+            <p>Drag the slider to see how our raw textures transform into breathtaking completed surfaces.</p>
           </div>
-          <div class="split-text order-mobile-first gs-reveal">
-            <h2 class="split-title">Contact Us</h2>
-            <div class="split-desc" style="display: flex; flex-direction: column; gap: 25px;">
-              <div>
-                <strong style="color: var(--color-green); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">Email</strong><br>
-                <a href="mailto:smartpavers@gmail.com" style="color: var(--color-dark-green); text-decoration: none; font-size: 1.25rem;">smartpavers@gmail.com</a>
-              </div>
-              <div>
-                <strong style="color: var(--color-green); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">Phone</strong><br>
-                <a href="tel:9388562452" style="color: var(--color-dark-green); text-decoration: none; font-size: 1.25rem;">9388562452</a>, 
-                <a href="tel:9207080309" style="color: var(--color-dark-green); text-decoration: none; font-size: 1.25rem;">9207080309</a>
-              </div>
-              <div>
-                <strong style="color: var(--color-green); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">Address</strong><br>
-                <span style="color: var(--color-dark-green); font-size: 1.25rem;">MARAMPALLY P.O, ALUVA-683105</span>
+          <div class="ba-slider">
+            <div class="ba-image ba-after">
+              <!-- Completed Project -->
+              <img src="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.05 (1)_gallery.webp" alt="Completed Project" loading="lazy">
+            </div>
+            <div class="ba-image ba-before">
+              <!-- Close up texture -->
+              <img src="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.30.02_gallery.webp" alt="Raw Texture" loading="lazy">
+            </div>
+            <div class="ba-handle">
+              <div class="ba-handle-line"></div>
+              <div class="ba-handle-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
               </div>
             </div>
           </div>
         </div>
       </section>
+
     </main>
 
-    <footer class="florim-footer">
-      <div class="footer-brand">
-        <strong>SMART PAVERS</strong> &copy; <span id="year"></span>
+    <!-- Footer -->
+    <footer class="arch-footer" id="footer">
+      <div class="footer-bg-wrapper">
+        <img src="/assets/optimized/wa_WhatsApp Image 2026-08-01 at 17.29.56 (1)_gallery.webp" alt="Drone View Project" class="footer-bg gs-parallax" data-speed="0.1">
+        <div class="footer-overlay"></div>
       </div>
-      <div class="footer-links">
-        <a href="#" style="color: white; text-decoration: none; margin-left: 20px;">Privacy Policy</a>
-        <a href="#" style="color: white; text-decoration: none; margin-left: 20px;">Cookie Policy</a>
+      
+      <div class="footer-content">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <h2>SMART PAVERS</h2>
+            <p>Elevating the ground you walk on.</p>
+          </div>
+          <div class="footer-contact">
+            <h3>Headquarters</h3>
+            <p>MARAMPALLY P.O<br>ALUVA-683105</p>
+          </div>
+          <div class="footer-contact">
+            <h3>Inquiries</h3>
+            <a href="mailto:smartpavers@gmail.com">smartpavers@gmail.com</a>
+            <a href="tel:9388562452">+91 9388 562 452</a>
+            <a href="tel:9207080309">+91 9207 080 309</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> Smart Pavers. All Rights Reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+          </div>
+        </div>
       </div>
     </footer>
 
