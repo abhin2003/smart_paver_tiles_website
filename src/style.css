@@ -582,19 +582,22 @@ html, body {
 }
 
 
-/* Footer */
+/* Footer Re-design */
 .arch-footer {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 5%;
+  padding: 10vh 5% 5vh 5%;
   overflow: hidden;
 }
 
 .footer-overlay {
-  background: linear-gradient(to top, rgba(18,17,16,0.95) 20%, rgba(18,17,16,0.4) 100%);
+  /* Using inline style for the specific dark gradient */
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 }
 
 .footer-content {
@@ -603,65 +606,73 @@ html, body {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer-grid {
+.footer-top {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 60px;
-  margin-bottom: 80px;
+  margin-bottom: 8vh;
 }
 
-.footer-brand-col h2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  letter-spacing: 4px;
-  margin-bottom: 15px;
-}
-
-.footer-brand-col p {
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
-  color: #aaa;
-}
-
-.footer-contact h3 {
+.footer-info-col h3 {
   font-family: var(--font-sans);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: var(--color-accent);
 }
 
-.footer-contact p, .footer-contact a {
+.footer-info-col p, .footer-info-col a {
   display: block;
   color: var(--color-light);
   text-decoration: none;
   font-size: 1.1rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   line-height: 1.6;
   font-weight: 300;
   transition: color 0.3s;
 }
 
-.footer-contact a:hover {
+.footer-info-col a:hover {
   color: var(--color-accent);
+}
+
+.footer-massive-brand {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 4vh;
+  margin-bottom: 4vh;
+}
+
+.footer-massive-brand h2 {
+  font-family: var(--font-display);
+  font-size: 11vw; 
+  line-height: 0.8;
+  letter-spacing: -2px;
+  white-space: nowrap;
+  color: var(--color-white);
+  text-align: center;
 }
 
 .footer-bottom {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 30px;
   font-size: 0.85rem;
-  color: #888;
+  color: rgba(255,255,255,0.5);
 }
 
 .footer-legal a {
-  color: #888;
+  color: rgba(255,255,255,0.5);
   text-decoration: none;
   margin-left: 30px;
+  transition: color 0.3s;
+}
+
+.footer-legal a:hover {
+  color: var(--color-white);
 }
 
 /* Responsive */
@@ -762,6 +773,15 @@ html, body {
   
   .accordion-content h3 {
     font-size: 1.5rem;
+  }
+  
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .footer-massive-brand h2 {
+    font-size: 15vw;
   }
   
   .footer-bottom {
