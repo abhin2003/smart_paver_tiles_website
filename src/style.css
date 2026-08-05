@@ -485,7 +485,7 @@ html, body {
 }
 
 
-/* Before / After Interactive */
+/* Interactive Split Accordion */
 .arch-interactive {
   padding: var(--section-padding);
   background-color: var(--color-dark);
@@ -510,63 +510,75 @@ html, body {
   margin-bottom: 20px;
 }
 
-.ba-slider {
-  position: relative;
+.accordion-gallery {
+  display: flex;
   width: 100%;
   height: 70vh;
+  gap: 10px;
   overflow: hidden;
-  cursor: ew-resize;
 }
 
-.ba-image {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+.accordion-panel {
+  position: relative;
+  flex: 1; /* Default 50/50 split */
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.ba-image img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  pointer-events: none;
+.accordion-gallery:hover .accordion-panel {
+  flex: 0.5; /* Shrink others when gallery hovered */
 }
 
-.ba-before {
-  width: 50%; /* Initial state */
-  border-right: 2px solid var(--color-white);
-  z-index: 2;
+.accordion-gallery .accordion-panel:hover {
+  flex: 2; /* Expand hovered panel */
 }
 
-.ba-handle {
+.accordion-panel img {
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-panel:hover img {
+  transform: scale(1.05);
+}
+
+.accordion-content {
+  position: absolute;
   bottom: 0;
-  left: 50%;
-  width: 4px;
-  background-color: var(--color-white);
-  transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: var(--color-white);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+  transition-delay: 0.2s; /* Delay appearance slightly */
 }
 
-.ba-handle-btn {
-  width: 50px;
-  height: 50px;
-  background-color: var(--color-white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-  color: var(--color-dark);
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+.accordion-panel:hover .accordion-content {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.ba-handle-btn svg {
-  width: 14px;
-  height: 14px;
+.accordion-content h3 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 0.8;
 }
 
 
@@ -723,6 +735,33 @@ html, body {
   
   .ba-slider {
     height: 50vh;
+  }
+  
+  .accordion-gallery {
+    flex-direction: column;
+    height: 80vh;
+  }
+  
+  .accordion-panel {
+    flex: 1;
+  }
+  
+  .accordion-gallery:hover .accordion-panel {
+    flex: 1; /* Disable flex shrinking on mobile to avoid jumping */
+  }
+  
+  .accordion-gallery .accordion-panel:hover {
+    flex: 2;
+  }
+  
+  .accordion-content {
+    opacity: 1; /* Always show content on mobile */
+    transform: translateY(0);
+    padding: 20px;
+  }
+  
+  .accordion-content h3 {
+    font-size: 1.5rem;
   }
   
   .footer-bottom {

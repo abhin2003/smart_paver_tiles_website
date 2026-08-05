@@ -11,7 +11,6 @@ const init = () => {
     onComplete: () => {
       document.getElementById('preloader').style.display = 'none'
       initAnimations()
-      initBeforeAfterSlider()
     }
   })
 
@@ -110,42 +109,6 @@ const initAnimations = () => {
       }
     }
   })
-}
-
-// --- Before / After Interactive Slider ---
-const initBeforeAfterSlider = () => {
-  const slider = document.querySelector('.ba-slider');
-  const beforeImg = document.querySelector('.ba-before');
-  const handle = document.querySelector('.ba-handle');
-  
-  if(!slider) return;
-  
-  let isDown = false;
-  
-  const move = (e) => {
-    if(!isDown) return;
-    
-    const rect = slider.getBoundingClientRect();
-    let x = (e.clientX || e.touches[0].clientX) - rect.left;
-    
-    // Constraints
-    if (x < 0) x = 0;
-    if (x > rect.width) x = rect.width;
-    
-    const percent = (x / rect.width) * 100;
-    
-    beforeImg.style.width = `${percent}%`;
-    handle.style.left = `${percent}%`;
-  }
-  
-  slider.addEventListener('mousedown', () => isDown = true);
-  slider.addEventListener('touchstart', () => isDown = true, {passive: true});
-  
-  window.addEventListener('mouseup', () => isDown = false);
-  window.addEventListener('touchend', () => isDown = false);
-  
-  window.addEventListener('mousemove', move);
-  window.addEventListener('touchmove', move, {passive: true});
 }
 
 // --- Catalog Interactions ---
