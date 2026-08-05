@@ -797,4 +797,38 @@ html, body {
     gap: 40px;
     padding-top: 40px;
   }
+  
+  /* Footer Mobile Refinements */
+  .arch-footer-solid {
+    padding: 10vh 5% 5vh 5%;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+  
+  .btn-primary, .btn-whatsapp {
+    width: 100%;
+    justify-content: center;
+    padding: 18px 20px;
+  }
+  
+  .footer-cta {
+    margin-bottom: 10vh;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
 }
