@@ -92,38 +92,8 @@ const initAnimations = () => {
     })
   }
   
-  // Horizontal Scroll Portfolio (Desktop Only)
-  const horizontalSection = document.querySelector('.arch-horizontal-section');
-  const horizontalWrapper = document.getElementById('horizontal-wrapper');
-  
-  if (horizontalSection && horizontalWrapper) {
-    let mm = gsap.matchMedia();
-    
-    mm.add("(min-width: 769px)", () => {
-      // Calculate how far to translate the wrapper
-      const getScrollAmount = () => -(horizontalWrapper.scrollWidth - window.innerWidth);
-      
-      const tween = gsap.to(horizontalWrapper, {
-        x: getScrollAmount,
-        ease: "none"
-      });
-      
-      ScrollTrigger.create({
-        trigger: horizontalSection,
-        start: "top top",
-        end: () => `+=${horizontalWrapper.scrollWidth - window.innerWidth}`,
-        pin: true,
-        animation: tween,
-        scrub: 1,
-        invalidateOnRefresh: true
-      });
-      
-      return () => {
-        // Cleanup function for when it goes to mobile
-        gsap.set(horizontalWrapper, { clearProps: "all" });
-      }
-    });
-  }
+  // Horizontal Scroll Portfolio (Desktop Only) - REMOVED
+  // User requested native side-scroll instead of scroll-hijacking
   
   // Navbar blur/bg on scroll
   const nav = document.getElementById('navbar')
