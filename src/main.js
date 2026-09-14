@@ -41,6 +41,25 @@ gsap.ticker.add((time) => {
 })
 gsap.ticker.lagSmoothing(0)
 
+// --- Smooth Anchor Navigation ---
+const initSmoothScrollNav = () => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          lenis.scrollTo(targetElement, { 
+            offset: 0,
+            duration: 1.2
+          });
+        }
+      }
+    });
+  });
+};
+
 // --- GSAP Animations ---
 const initAnimations = () => {
   
@@ -64,16 +83,19 @@ const initAnimations = () => {
   // Parallax Backgrounds (Hero, Showcase, Footer)
   gsap.utils.toArray('.gs-parallax').forEach(bg => {
     const speed = bg.dataset.speed || 0.2;
-    gsap.to(bg, {
-      yPercent: speed * 100,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: bg.parentElement,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true
+    gsap.fromTo(bg, 
+      { yPercent: -speed * 50 },
+      {
+        yPercent: speed * 50,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: bg.parentElement,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true
+        }
       }
-    })
+    )
   })
   
   // Editorial Visual Parallax (moves inside container)
@@ -111,43 +133,40 @@ const initAnimations = () => {
   })
 }
 
-// --- Catalog Interactions ---
+// --- Catalog Interactions (Typographic Takeover) ---
 const initCatalogInteractions = () => {
-  const catalogItems = document.querySelectorAll('.catalog-item');
-  const previewImg = document.getElementById('catalog-preview-img');
+  const typoItems = document.querySelectorAll('.catalog-typo-item');
+  const bgItems = document.querySelectorAll('.catalog-bg-item');
   
-  if(!catalogItems.length || !previewImg) return;
+  if(!typoItems.length || !bgItems.length) return;
   
-  catalogItems.forEach(item => {
+  typoItems.forEach(item => {
     item.addEventListener('click', () => {
-      // Remove active from all
-      catalogItems.forEach(i => i.classList.remove('active'));
-      // Add active to current
+      // Get target index
+      const index = parseInt(item.getAttribute('data-index'));
+      
+      // Update typo active state (optional since CSS handles hover, but good for tracking)
+      typoItems.forEach(i => i.classList.remove('active'));
       item.classList.add('active');
       
-      // Change image with fade effect
-      const newImg = item.getAttribute('data-img');
-      if (previewImg.src.indexOf(newImg) === -1) { // Only if different
-        gsap.to(previewImg, {
-          opacity: 0,
-          duration: 0.3,
-          onComplete: () => {
-            previewImg.src = newImg;
-            gsap.to(previewImg, {
-              opacity: 1,
-              duration: 0.3
-            })
-          }
-        })
-      }
-    })
-  })
+      // Update backgrounds
+      bgItems.forEach((bg, i) => {
+        if (i === index) {
+          bg.classList.add('active');
+        } else {
+          bg.classList.remove('active');
+        }
+      });
+    });
+  });
 }
 
 // Start
 document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year')
   if (yearEl) yearEl.textContent = new Date().getFullYear()
+  
+  initSmoothScrollNav();
 })
 
 window.addEventListener('load', () => {

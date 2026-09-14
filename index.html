@@ -88,67 +88,49 @@
         </div>
       </section>
 
-      <!-- Section 2.5: The Catalog (Product Categories) -->
-      <section class="arch-catalog" id="catalog">
-        <div class="catalog-container">
-          <div class="catalog-visual gs-reveal-up">
-            <!-- This image changes on click -->
-            <img id="catalog-preview-img" src="/assets/generated/sdp_1013_cobble_1789298611115.jpg" alt="SDP 1013 (Cobble)" loading="lazy">
-          </div>
-          <div class="catalog-list gs-reveal-up">
-            <h3 class="catalog-label">Our Products</h3>
-            <ul class="catalog-items" id="catalog-list">
-              <li class="catalog-item active" data-img="/assets/generated/sdp_1013_cobble_1789298611115.jpg">
-                <span class="catalog-number">01</span>
-                <h4>SDP 1013 (Cobble)</h4>
-              </li>
-              <li class="catalog-item" data-img="/assets/generated/sdp_1011_1789298598828.jpg">
-                <span class="catalog-number">02</span>
-                <h4>SDP 1011</h4>
-              </li>
-              <li class="catalog-item" data-img="/assets/generated/sdp_1010_1789298584287.jpg">
-                <span class="catalog-number">03</span>
-                <h4>SDP 1010</h4>
-              </li>
-              <li class="catalog-item" data-img="/assets/generated/sdp_1007_1789298571611.jpg">
-                <span class="catalog-number">04</span>
-                <h4>SDP 1007</h4>
-              </li>
-              <li class="catalog-item" data-img="/assets/generated/sdp_1005_1789298557504.jpg">
-                <span class="catalog-number">05</span>
-                <h4>SDP 1005</h4>
-              </li>
-              <li class="catalog-item" data-img="/assets/generated/bangalore_stone_1789298622904.jpg">
-                <span class="catalog-number">06</span>
-                <h4>Banglore Stone</h4>
-              </li>
-              <li class="catalog-item" data-img="/assets/generated/shahabad_stone_1789298739735.jpg">
-                <span class="catalog-number">07</span>
-                <h4>Shehabad Stone</h4>
-              </li>
-              <li class="catalog-item" data-img="/assets/generated/cobble_stone_1789298754122.jpg">
-                <span class="catalog-number">08</span>
-                <h4>Coble Stone</h4>
-              </li>
-            </ul>
-          </div>
+      <!-- Section 2.5: The Catalog (Typographic Takeover) -->
+      <section class="arch-catalog-typo" id="catalog">
+        <div class="catalog-bg-wrapper" id="catalog-bg-wrapper">
+          <div class="catalog-bg-item active" style="background-image: url('/assets/generated/sdp_1013_cobble_1789298611115.jpg');"></div>
+          <div class="catalog-bg-item" style="background-image: url('/assets/generated/sdp_1011_1789298598828.jpg');"></div>
+          <div class="catalog-bg-item" style="background-image: url('/assets/generated/sdp_1010_1789298584287.jpg');"></div>
+          <div class="catalog-bg-item" style="background-image: url('/assets/generated/sdp_1007_1789298571611.jpg');"></div>
+          <div class="catalog-bg-item" style="background-image: url('/assets/generated/sdp_1005_1789298557504.jpg');"></div>
+          <div class="catalog-bg-item" style="background-image: url('/assets/generated/bangalore_stone_1789298622904.jpg');"></div>
+          <div class="catalog-bg-item" style="background-image: url('/assets/generated/shahabad_stone_1789298739735.jpg');"></div>
+          <div class="catalog-bg-item" style="background-image: url('/assets/generated/cobble_stone_1789298754122.jpg');"></div>
+          <div class="catalog-overlay"></div>
+        </div>
+
+        <div class="catalog-typo-container gs-reveal-up">
+          <h3 class="catalog-label">Our Collections</h3>
+          <ul class="catalog-typo-list" id="catalog-list">
+            <li class="catalog-typo-item active" data-index="0">SDP 1013 (Cobble)</li>
+            <li class="catalog-typo-item" data-index="1">SDP 1011</li>
+            <li class="catalog-typo-item" data-index="2">SDP 1010</li>
+            <li class="catalog-typo-item" data-index="3">SDP 1007</li>
+            <li class="catalog-typo-item" data-index="4">SDP 1005</li>
+            <li class="catalog-typo-item" data-index="5">Banglore Stone</li>
+            <li class="catalog-typo-item" data-index="6">Shehabad Stone</li>
+            <li class="catalog-typo-item" data-index="7">Coble Stone</li>
+          </ul>
         </div>
       </section>
 
-      <!-- Section 3: Flagship Showcase (Cobble) -->
-      <section class="arch-showcase" id="cobble">
-        <div class="showcase-bg-wrapper">
-          <!-- Cobble Image -->
-          <img src="/assets/generated/cobble_texture_only.jpg" alt="The Cobble Collection" class="showcase-bg gs-parallax" data-speed="0.15">
-          <div class="showcase-overlay"></div>
-        </div>
-        <div class="showcase-content gs-reveal-up">
-          <h3 class="showcase-label">The Flagship</h3>
-          <h2 class="showcase-title">The Cobble Collection</h2>
-          <p class="showcase-desc">
-            Our magnum opus. SDP 1012 & 1013 redefine the texture of luxury. Precision-engineered for strength, meticulously textured for an organic, timeless feel. 
-          </p>
-          <a href="#projects" class="btn-outline">Explore the Collection</a>
+      <!-- Section 3: Flagship Showcase (Light Minimalist) -->
+      <section class="arch-showcase-light" id="cobble">
+        <div class="showcase-container">
+          <div class="showcase-content gs-reveal-up">
+            <h3 class="showcase-label">The Flagship</h3>
+            <h2 class="showcase-title">The Cobble<br>Collection</h2>
+            <p class="showcase-desc">
+              Our magnum opus. SDP 1012 & 1013 redefine the texture of luxury. Precision-engineered for strength, meticulously textured for an organic, timeless feel. 
+            </p>
+            <a href="#catalog" class="btn-dark">Explore the Collection</a>
+          </div>
+          <div class="showcase-visual-wrapper gs-reveal-up">
+             <img src="/assets/generated/cobble_texture_only.jpg" alt="The Cobble Collection" class="showcase-visual-img gs-parallax" data-speed="0.1">
+          </div>
         </div>
       </section>
 
@@ -242,7 +224,7 @@
     </main>
 
       <!-- Solid Minimalist Footer -->
-      <footer class="arch-footer-solid">
+      <footer class="arch-footer-solid" id="footer">
         <div class="footer-solid-container">
           
           <div class="footer-cta gs-reveal-up">
