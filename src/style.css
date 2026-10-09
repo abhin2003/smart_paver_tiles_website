@@ -257,7 +257,8 @@ html, body {
 /* Catalog / Collections Section (Typographic Takeover) */
 .arch-catalog-typo {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 15vh 0;
   width: 100vw;
   background-color: var(--color-dark);
   color: var(--color-light);
@@ -325,13 +326,13 @@ html, body {
 
 .catalog-typo-item {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 5rem);
+  font-size: clamp(1.8rem, 4.5vw, 4.5rem);
   font-weight: 400;
   line-height: 1.1;
   cursor: pointer;
   opacity: 0.5; /* Default inactive state */
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 .catalog-typo-item.active,
@@ -369,6 +370,10 @@ html, body {
   margin: 0 auto;
   gap: 8vw;
   align-items: center;
+}
+
+.showcase-container.reverse {
+  flex-direction: row-reverse;
 }
 
 .showcase-content {
